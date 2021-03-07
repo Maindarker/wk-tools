@@ -1,0 +1,22 @@
+{
+  "name": "wk-tools",
+  "version": "1.0.0",
+  "description": "A tools package for myself",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Maindarker/wk-tools.git"
+  },
+  "keywords": [
+    "ztmnb"
+  ],
+  "author": "wenke",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maindarker/wk-tools/issues"
+  },
+  "homepage": "https://github.com/Maindarker/wk-tools#readme"
+}
