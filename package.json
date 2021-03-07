@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/Maindarker/wk-tools/issues"
   },
-  "homepage": "https://github.com/Maindarker/wk-tools#readme"
+  "homepage": "https://github.com/Maindarker/wk-tools#readme",
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "qs": "^6.9.6"
+  }
 }
