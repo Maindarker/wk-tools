@@ -1,6 +1,6 @@
 {
   "name": "wk-tools",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A tools package for myself",
   "main": "index.js",
   "scripts": {
