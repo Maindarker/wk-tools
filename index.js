@@ -1,4 +1,5 @@
-export const iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+export const iOS =
+  !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
 /** Calculation time difference  Unit / MS
  * @param startTime
@@ -9,10 +10,10 @@ export function getTimeRemainingString(startTime, endTime) {
   const seconds = Math.floor((total / 1000) % 60);
   const minutes = Math.floor((total / 1000 / 60) % 60);
   const hours = Math.floor(total / (1000 * 60 * 60));
-  // const days = Math.floor(total / (1000 * 60 * 60 * 24));
+  const days = Math.floor(total / (1000 * 60 * 60 * 24));
   return {
     total,
-    // days: `0${days}`.slice(-2),
+    days: `0${days}`.slice(-2),
     hours: `0${hours}`.slice(-2),
     minutes: `0${minutes}`.slice(-2),
     seconds: `${`0${seconds}`}`.slice(-2),
@@ -53,14 +54,16 @@ export function getTheEndOfTheDay(time) {
  */
 export function getQuery(key, url) {
   url = url || window.location.search;
-  const hashIndex = url.indexOf('#');
+  const hashIndex = url.indexOf("#");
   if (hashIndex > 0) {
     url = url.substr(0, hashIndex);
   }
 
-  const keyMatches = url.match(new RegExp(`[?|&]${encodeURIComponent(key)}=([^&]*)(&|$)`));
-  if (keyMatches && keyMatches[1] === '%s') {
+  const keyMatches = url.match(
+    new RegExp(`[?|&]${encodeURIComponent(key)}=([^&]*)(&|$)`)
+  );
+  if (keyMatches && keyMatches[1] === "%s") {
     return keyMatches[1];
   }
-  return keyMatches ? decodeURIComponent(keyMatches[1]) : '';
+  return keyMatches ? decodeURIComponent(keyMatches[1]) : "";
 }
