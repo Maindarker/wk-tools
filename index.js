@@ -1,6 +1,3 @@
-export const iOS =
-  !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-
 /** Calculation time difference  Unit / MS
  * @param startTime
  * @param endTime
